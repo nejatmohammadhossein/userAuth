@@ -1,0 +1,28 @@
+<body dir="rtl">
+    <div class="box container" style="font-family: BYek;">
+        <div class="table-responsive">
+              
+            <label>نام کاربری</label>
+            <input type="text" name="userId" id="userId" [(ngModel)]="loginData.userName" class="form-control" placeholder="نام کاربری">
+            <label>رمز عبور</label>
+            <input type="password" name="password" id="password" [(ngModel)]="loginData.password"class="form-control" placeholder="رمز عبور">
+          <ngx-recaptcha2 #captchaElem 
+          [siteKey]="siteKey"
+         
+          (success)="handleSuccess($event)"
+          (expire)="handleExpire()"
+          
+          [hl]="lang"
+          
+           
+            >
+          </ngx-recaptcha2>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" (click)="login()">ورود</button>
+            <button type="button" class="btn btn-danger" (click)="close()">برگشت</button>
+        </div>
+        <div *ngIf="showInvalidWarn">نام کاربری و رمز عبور اشتباه است</div>
+       
+    </div>
+</body>

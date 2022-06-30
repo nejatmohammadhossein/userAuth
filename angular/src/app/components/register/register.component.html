@@ -1,0 +1,31 @@
+<body dir="rtl">
+    <div class="box container" style="font-family: BYek;">
+        <div class="table-responsive">
+            <h4 class="modal-title">ثبت نام در سیستم</h4>
+            <label>نام</label>
+            <input type="text" name="userName" id="userName" [(ngModel)]="registerData.name"  class="form-control" placeholder="نام ">
+            <label>نام کاربری</label>
+            <input type="text" name="userId" id="userId" [(ngModel)]="registerData.userName"  class="form-control" placeholder="نام کاربری">
+            <label>رمز عبور</label>
+            <input type="password" name="password"  id="password" [(ngModel)]="registerData.password"  class="form-control" placeholder="رمز عبور">
+            <label>تکرار رمز عبور</label>
+            <input type="password" name="re_password" id="re_password" [(ngModel)]="registerData.rePassword"  class="form-control" placeholder="رمز عبور">
+            <ngx-recaptcha2 #captchaElem 
+            [siteKey]="siteKey"
+           
+            (success)="handleSuccess($event)"
+            (expire)="handleExpire()"
+            
+            [hl]="lang"
+            
+             
+              >
+            </ngx-recaptcha2>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" (click)="register()">ذخیره</button>
+            <button type="button" class="btn btn-danger" (click)="close()">برگشت</button>
+        </div>
+        <div *ngIf="showSave">اطلاعات با موفقیت ذخیره شد</div>
+    </div>
+</body>

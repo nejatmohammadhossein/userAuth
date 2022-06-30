@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class=" card highlight-card card-small">
+    <img src="./../assets/faradars-profile-picture.png" padding="10px" width="100" class="rounded-circle">
+
+    <span> آموزش برنامه ورود به سایت در {{ title }}</span>
+
+    <!-- <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
+      <title>Rocket Ship Smoke</title>
+      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
+    </svg> -->
+
+  </div>
+
+  <!-- Resources -->
+  <h2>Resources</h2>
+  <p>Here are some links to help you get started:</p>
+
+  <div class="card-container">
+   
+    <!-- <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+
+      <span>Learn Angular</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a> -->
+      <input type="button" 
+      class="btn btn-success" 
+      value="ورود به سیستم"
+      (click)="openDialogLogin()" >
+      <input type="button" 
+      class="btn btn-danger" 
+      value="ثبت نام کاربر جدید"
+      (click)="openDialogRegister()"
+      >
+
+  </div>
+
+  <!-- Next Steps -->
+  <h2>Next Steps</h2>
+  <p>What do you want to do next with your app?</p>
+
+  <input type="hidden" #selection>
+
+  <!-- Footer -->
+  <footer>
+      
+  </footer>
+
+ 
+
+</div>
+

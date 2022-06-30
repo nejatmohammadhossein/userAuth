@@ -1,0 +1,32 @@
+<div *ngIf="innerWidth>800">
+    <div id="mySidebar" class="big-sidebar">
+        <ul>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+        <!-- <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+      </div>
+
+</div>
+<div *ngIf="innerWidth<800">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+        <ul>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+        <!-- <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" (click)="openNav()">☰</button>  
+       
+      </div>
+</div>
+

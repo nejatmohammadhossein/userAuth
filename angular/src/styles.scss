@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+    font-family: 'BYek';
+    src: url('./app/fonts/BYekan.woff2') format('woff2'),
+        url('./app/fonts/BYekan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    direction: rtl;
+    
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
